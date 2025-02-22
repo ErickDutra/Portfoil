@@ -1,0 +1,148 @@
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    flex-direction: column;
+}
+
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffc107;
+    padding: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.788);
+    border-radius: 10px;
+}
+
+.projects-list div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.project-image {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.project-image img {
+    width: 30%;
+    height: 80%;
+    border-radius: 10px;
+    animation: rotate 8s linear infinite;
+
+}
+
+
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    max-width: 40%;
+}
+
+.projects-list h3 {
+    font-size: 2rem;
+    color: #000000;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 5px rgba(65, 65, 65, 0.836);
+
+}
+
+.projects-list p {
+    font-size: 1.2rem;
+    color: #000000;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgba(65, 65, 65, 0.836);
+}
+
+.projects-list a {
+    font-size: 1.2rem;
+    color: #008ae0;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.projects-lista:hover {
+    text-decoration: underline;
+}
+
+.projects-list button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 10px;
+    background: none;
+}
+
+
+.projects-list button img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+#left{
+    position: relative;
+    left: -23rem;
+    bottom: 10.2rem;
+}
+
+#right{
+    position: relative;
+    right: -23rem;
+    bottom: 12.3rem;
+}
+.project-item a img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.project-item a img:hover {
+    transform: scale(1.2);
+}
+
+
+
+.projects-list button img:hover {
+    transform: scale(1.2);
+}
+
