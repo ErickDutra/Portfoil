@@ -10,15 +10,15 @@ function About() {
       <div className="about-text">
         <p>
             Sou um desenvolvedor <b>Back-end</b> com experiência profissional em
-          TypeScript, mas meu principal foco está no desenvolvimento de soluções
-          em Java, utilizando Spring Boot. Além disso, tenho experiência no
-          desenvolvimento de aplicações multiplataforma com Flutter e
+          <b>TypeScript</b>, com o principal foco em desenvolvimento de soluções
+          em <b>Java</b>, utilizando Spring Boot. Além disso, tenho experiência no
+          desenvolvimento de aplicações multiplataforma com <b>Flutter</b> e
           conhecimentos básicos em Front-end com React.
           <br />
           Por atuar não apenas no desenvolvimento de aplicações, mas também na
           integração de clientes e na estilização de relatórios, adquiri um
-          conhecimento intermediário em bancos de dados relacionais, como
-          PostgreSQL e MySQL. Também possuo uma básica experiência em Docker, o
+          conhecimento solidos em bancos de dados relacionais, como
+          <b>PostgreSQL</b> e <b>MySQL</b>. Também possuo conhecimento em <b>Docker</b>, o
           que me permite criar ambientes de desenvolvimento e produção mais
           eficientes e escaláveis.{" "}
         </p>

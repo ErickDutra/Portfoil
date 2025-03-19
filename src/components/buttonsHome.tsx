@@ -1,10 +1,12 @@
 import "../assets/css/buttonsHome.css"
+import curriculo from "../assets/curriculo.pdf"
+
 function ButtonsHome(){
     return (
         <div className="home-buttons">
-            <button >Git-Hub</button>
-            <button >Linkedin</button>
-            <button >Curriculum</button>
+            <a href="https://github.com/ErickDutra"><button >Git-Hub</button></a>
+            <a href="https://www.linkedin.com/in/erick-dutra/"><button >Linkedin</button></a>
+            <a href={curriculo} download> <button >Curriculum</button></a>
         </div>
     )
 }
