@@ -18,9 +18,10 @@
     height: 50px;
     margin-bottom: 10px;
     transition: transform 0.3s ease, outline 0.3s ease;
-    
+    background-color: #B1C6DE;
+    border-radius: 0.1em;
 }
 
 .icons-contact a img:hover {
-    transform: rotate(15deg) scale(1.1);
+    background-color: #0168a8;
 }

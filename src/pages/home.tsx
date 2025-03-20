@@ -5,7 +5,8 @@ function HomePage(){
     return (
         <div className="home">
         <div className="home-text">
-            <p>Olá! Seja muito bem-vindo ao meu portfólio! Como um bom nerd e desenvolvedor, decidi dar um toque pessoal a este espaço. Fique à vontade e aproveite a experiência!</p>
+            <p>Seja bem-vindo!</p>
+            <p> Aqui, inovação e tecnologia se unem para entregar soluções que fazem a diferença.</p>
             <div><ButtonsHome/></div>
         </div>
         <div className="home-image">
