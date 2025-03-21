@@ -105,7 +105,7 @@ function ProjectsPage() {
               <img
                 width="50"
                 height="50"
-                src="https://img.shields.io/badge/GitHub-B1C6DE?style=for-the-badge&logo=github&logoColor=white"
+                src="https://img.shields.io/badge/GitHub-0168a8?style=for-the-badge&logo=github&logoColor=white"
                 alt="github"
                 className="badge"
               />
