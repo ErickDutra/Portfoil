@@ -1,31 +1,35 @@
 {
     "itens": [
         {
+        "id":0,
         "titulo": "OnMovie",
         "descricao": "Projeto desenvolvido em React consumindo Api da TMDB",
-        "ferramentas": ["https://img.icons8.com/plasticine/100/react.png"],
+        "ferramentas": ["https://skillicons.dev/icons?i=react"],
         "link":"https://github.com/ErickDutra/onMovie",
         "imagem": "onMovie.png"
 
     },
     {
+        "id":1,
         "titulo": "Stock App",
         "descricao": "Projeto Desenvolvido em Flutter, para gerenciamento de estoque.",
-        "ferramentas": ["https://img.icons8.com/fluency/100/flutter.png"],
+        "ferramentas": ["https://skillicons.dev/icons?i=flutter"],
         "link":"https://github.com/ErickDutra/stock_app",
         "imagem": "stock.png"
     },
     {
+        "id":2,
         "titulo": "Clone Spotfy",
         "descricao": "Projeto desenvolvido em Flutter para consolidação de conhecimento.",
-        "ferramentas": ["https://img.icons8.com/fluency/100/flutter.png"],
+        "ferramentas": ["https://skillicons.dev/icons?i=flutter"],
         "link":"https://github.com/ErickDutra/spotfy_clone",
         "imagem": "spotfy.png"
     },
     {
+        "id":3,
         "titulo": "Api Login",
         "descricao": "Projeto desenvolvido em java, utilizando Spring Boot, para autenticação de usuários.",
-        "ferramentas": ["https://img.icons8.com/color/100/java-coffee-cup-logo--v1.png", "https://img.icons8.com/color/100/spring-logo.png"],
+        "ferramentas": ["https://skillicons.dev/icons?i=java","https://skillicons.dev/icons?i=spring"],	
         "link":"https://github.com/ErickDutra/api_login",
         "imagem": "login.png"
     }

@@ -5,11 +5,15 @@ function ButtonsHome() {
   return (
     <div className="home-buttons">
       <a href="https://github.com/ErickDutra">
-        <button>
-        <img width="24" height="24" src="https://img.icons8.com/external-tal-revivo-bold-tal-revivo/24/external-github-community-for-software-building-and-testing-online-logo-bold-tal-revivo.png" alt="external-github-community-for-software-building-and-testing-online-logo-bold-tal-revivo"/>
+        <button>{" "}
+        <img width="24"
+         height="24" 
+         src="https://skillicons.dev/icons?i=github" 
+         alt="github"/>{" "}
           Git-Hub
         </button>
       </a>
+      {" "}
       <a href="https://www.linkedin.com/in/erick-dutra/">
         <button>
           <img
@@ -17,7 +21,7 @@ function ButtonsHome() {
             height="100"
             src="https://img.icons8.com/ios-filled/100/linkedin.png"
             alt="linkedin"
-          />
+          />{" "}
           Linkedin
         </button>
       </a>

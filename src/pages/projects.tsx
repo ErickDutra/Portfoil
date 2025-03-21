@@ -3,18 +3,21 @@ import "../assets/css/projects.css";
 import json from "../assets/projetos/projetos.json";
 
 class ProjectItem {
+  id: number;
   titulo: string;
   descricao: string;
   ferramentas: string[];
   link: string;
   imagem: string;
   constructor(
+    id: number,
     titulo: string,
     descricao: string,
     ferramentas: string[],
     link: string,
     imagem: string
   ) {
+    this.id = id;
     this.titulo = titulo;
     this.descricao = descricao;
     this.ferramentas = ferramentas;
@@ -25,6 +28,7 @@ class ProjectItem {
 
 interface ProfileData {
   itens: {
+    id: number;
     titulo: string;
     descricao: string;
     ferramentas?: string[];
@@ -35,12 +39,10 @@ interface ProfileData {
 
 function ProjectsPage() {
   const [listProjects, setListProjects] = useState<ProjectItem[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [imageUrl, setImageUrl] = useState("");
+  const [imageUrls, setImageUrls] = useState<{ [key: number]: string }>({});
 
-  const images = import.meta.glob(
-    "../assets/projetos/image/*.{png,jpg,jpeg,svg}"
-  );
+  // Importação dinâmica das imagens
+  const images = import.meta.glob("../assets/projetos/image/*.{png,jpg,jpeg,svg}");
 
   useEffect(() => {
     function loadProjects() {
@@ -48,6 +50,7 @@ function ProjectsPage() {
       const projects: ProjectItem[] = response.itens.map(
         (item) =>
           new ProjectItem(
+            item.id,
             item.titulo,
             item.descricao,
             item.ferramentas || [],
@@ -62,73 +65,54 @@ function ProjectsPage() {
 
   useEffect(() => {
     if (listProjects.length === 0) return;
-    const currentProject = listProjects[currentIndex];
-    const path = `../assets/projetos/image/${currentProject.imagem}`;
-    if (images[path]) {
-      images[path]().then((module: any) => {
-        setImageUrl(module.default);
-      });
-    }
-  }, [listProjects, currentIndex, images]);
 
-  const handleNext = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % listProjects.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIndex(
-      (prevIndex) => (prevIndex - 1 + listProjects.length) % listProjects.length
-    );
-  };
+    listProjects.forEach((project) => {
+      const path = `../assets/projetos/image/${project.imagem}`;
+      if (images[path]) {
+        images[path]().then((module) => {
+          setImageUrls((prev) => ({
+            ...prev,
+            [project.id]: (module as { default: string }).default,
+          }));
+        });
+      }
+    });
+  }, [listProjects, images]);
 
   if (listProjects.length === 0) {
     return <div>Loading...</div>;
   }
-  const currentProject = listProjects[currentIndex];
 
   return (
-    <div id="projects" className="projects ">
-      <div className="projects-list">
-        <div className="project-item">
-          <div className="project-container ">
-            <h3>{currentProject.titulo}</h3>
-            <div className="project-image">
-              {imageUrl && <img src={imageUrl} alt="icons" className="front" />}
-            </div>
-            <div className="project-footer">
-                <div className="ferramentas">
-                    {currentProject.ferramentas.map((item) => (
-                <img src={item} alt="" />
-              ))}
-                </div>
-              <p>{currentProject.descricao}</p>
-              <a href={currentProject.link}>
-                <img
-                  width="80"
-                  height="80"
-                  src="https://img.icons8.com/color/100/000000/github.png"
-                  alt="github"
-                />
-              </a>
+    <div id="projects" className="projects">
+      <div className="scroll-container block">
+        {listProjects.map((project) => (
+          <div
+            key={`${project.titulo}-${project.link}`}
+            className="scroll-item block"
+          >
+            {imageUrls[project.id] && (
+              <img src={imageUrls[project.id]} alt="icons" className="front block" />
+            )}
+            <div className="project-description block">
+            <h3>{project.titulo}</h3>
+            <p>{project.descricao}</p>
+            <a href={project.link}>
+            <div>
+            {project.ferramentas.map((item) => (
+            <img key={item} src={`${item}`} alt={item}  className="stacks block" />
+              ))}</div>
+              <img
+                width="50"
+                height="50"
+                src="https://img.shields.io/badge/GitHub-B1C6DE?style=for-the-badge&logo=github&logoColor=white"
+                alt="github"
+                className="badge"
+              />
+            </a>
             </div>
           </div>
-          <button id="left" onClick={handlePrev}>
-            <img
-              width="32"
-              height="32"
-              src="https://img.icons8.com/skeuomorphism/32/back.png"
-              alt="back"
-            />
-          </button>
-          <button id="right" onClick={handleNext}>
-            <img
-              width="32"
-              height="32"
-              src="https://img.icons8.com/skeuomorphism/32/forward.png"
-              alt="forward"
-            />
-          </button>
-        </div>
+        ))}
       </div>
     </div>
   );
