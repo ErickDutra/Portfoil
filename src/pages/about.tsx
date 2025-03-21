@@ -3,7 +3,7 @@ import "../assets/css/about.css";
 import ItensContact from "../components/itensContact";
 function About() {
   return (
-    <div className="about">
+    <div id="about" className="about">
       <div className="about-image">
         <img src={img} alt="Erick Dutra" />
       </div>

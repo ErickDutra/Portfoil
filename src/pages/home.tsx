@@ -3,7 +3,7 @@ import img from '../assets/imgs/img-duck.gif';
 import ButtonsHome from '../components/buttonsHome';
 function HomePage(){
     return (
-        <div className="home">
+        <div id="home" className="home">
         <div className="home-text">
             <p>Seja bem-vindo!</p>
             <p> Aqui, inovação e tecnologia se unem para entregar soluções que fazem a diferença.</p>

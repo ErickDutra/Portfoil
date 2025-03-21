@@ -70,7 +70,7 @@ function ProjectsPage() {
     const currentProject = listProjects[currentIndex];
 
     return (
-        <div className="projects">
+        <div id="projects" className="projects">
 
             <div className="projects-list">
                 <div className="project-item">

@@ -8,7 +8,6 @@ import ProjectsPage from './pages/projects.tsx'
 function App() {
 
   return (
-    <>
       <div className="app">
         <AppBar />
         <HomePage />
@@ -17,7 +16,6 @@ function App() {
         <BarTecnology/>
         <ProjectsPage/>
       </div>
-    </>
   )
 }
 
