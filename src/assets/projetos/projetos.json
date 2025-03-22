@@ -3,7 +3,7 @@
         {
         "id":0,
         "titulo": "OnMovie",
-        "descricao": "Projeto desenvolvido em React consumindo Api da TMDB",
+        "descricao": "Projeto desenvolvido em React consumindo Api da TMDB.",
         "ferramentas": ["https://skillicons.dev/icons?i=react", "https://skillicons.dev/icons?i=typescript"],
         "link":"https://github.com/ErickDutra/onMovie",
         "imagem": "onMovie.png"
@@ -12,7 +12,7 @@
     {
         "id":1,
         "titulo": "Stock App",
-        "descricao": "Projeto Desenvolvido em Flutter, para gerenciamento de estoque.",
+        "descricao": "Projeto desenvolvido em Flutter, para gerenciamento de estoque.",
         "ferramentas": ["https://skillicons.dev/icons?i=flutter","https://skillicons.dev/icons?i=dart"],
         "link":"https://github.com/ErickDutra/stock_app",
         "imagem": "stock.png"
@@ -20,7 +20,7 @@
     {
         "id":2,
         "titulo": "Clone Spotfy",
-        "descricao": "Projeto desenvolvido em Flutter para consolidação de conhecimento.",
+        "descricao": "Projeto desenvolvido em Flutter, para consolidação de conhecimento.",
         "ferramentas": ["https://skillicons.dev/icons?i=flutter","https://skillicons.dev/icons?i=dart"],
         "link":"https://github.com/ErickDutra/spotfy_clone",
         "imagem": "spotfy.png"
@@ -28,7 +28,7 @@
     {
         "id":3,
         "titulo": "Api Login",
-        "descricao": "Projeto desenvolvido em java, utilizando Spring Boot, para autenticação de usuários.",
+        "descricao": "Projeto desenvolvido em Java, utilizando Spring Boot, para autenticação de usuários.",
         "ferramentas": ["https://skillicons.dev/icons?i=java","https://skillicons.dev/icons?i=spring"],	
         "link":"https://github.com/ErickDutra/api_login",
         "imagem": "login.png"
