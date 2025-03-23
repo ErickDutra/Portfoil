@@ -64,3 +64,39 @@
     animation-timeline: view();
     animation-range: entry 0% cover 50%;
   }
+
+
+@media( max-width: 480px ) {
+    .home-text{
+        margin-top: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: left;
+        width: 80%;
+        height: 40%;
+        border: #3F6188 2px solid;
+        border-radius: 0.4rem;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .home-text p{
+        font-size: 1.5rem;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.836);
+    }
+
+    .home{
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-color: #071B33;
+    }
+    
+
+
+
+}
