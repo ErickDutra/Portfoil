@@ -4,7 +4,7 @@ import curriculo from "../assets/curriculo.pdf";
 function ButtonsHome() {
   return (
     <div className="home-buttons">
-      <a href="https://github.com/ErickDutra">
+      <a href="https://github.com/ErickDutra" target="_blank">
         <button>{" "}
         <img width="24"
          height="24" 
@@ -14,7 +14,7 @@ function ButtonsHome() {
         </button>
       </a>
       {" "}
-      <a href="https://www.linkedin.com/in/erick-dutra/">
+      <a href="https://www.linkedin.com/in/erick-dutra/" target="_blank" >
         <button>
           <img
             width="100"
