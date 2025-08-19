@@ -6,10 +6,9 @@
 }
 
 .app{
-    background-color: #071B33;
     height: 100vh;
     overflow: auto;
-  
+    background: linear-gradient(135deg, #071B33 0%, #0A2847 50%, #071B33 100%);
 }
 
 .app::-webkit-scrollbar{

@@ -80,36 +80,73 @@ function ProjectsPage() {
   }, [listProjects, images]);
 
   if (listProjects.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <div className="loading-container">
+        <div className="loading-spinner"></div>
+        <p>Carregando projetos...</p>
+      </div>
+    );
   }
 
   return (
     <div id="projects" className="projects">
-      <div className="scroll-container block">
+      <div className="projects-header">
+        <h1>Meus Projetos</h1>
+        <p>Conheça alguns dos projetos que desenvolvi</p>
+      </div>
+      
+      <div className="projects-grid">
         {listProjects.map((project) => (
           <div
             key={`${project.titulo}-${project.link}`}
-            className="scroll-item block"
+            className="project-card"
           >
-            {imageUrls[project.id] && (
-              <img src={imageUrls[project.id]} alt="icons" className="front block" />
-            )}
-            <div className="project-description block">
-            <h3>{project.titulo}</h3>
-            <p>{project.descricao}</p>
-            <a href={project.link}>
-            <div>
-            {project.ferramentas.map((item) => (
-            <img key={item} src={`${item}`} alt={item}  className="stacks block" />
-              ))}</div>
-              <img
-                width="50"
-                height="50"
-                src="https://img.shields.io/badge/GitHub-0168a8?style=for-the-badge&logo=github&logoColor=white"
-                alt="github"
-                className="badge"
-              />
-            </a>
+            <div className="project-image">
+              {imageUrls[project.id] && (
+                <img 
+                  src={imageUrls[project.id]} 
+                  alt={`Preview do projeto ${project.titulo}`} 
+                  className="project-screenshot" 
+                />
+              )}
+              <div className="image-overlay">
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="view-project">
+                  <span>Ver Projeto</span>
+                </a>
+              </div>
+            </div>
+            
+            <div className="project-content">
+              <div className="project-header">
+                <h3>{project.titulo}</h3>
+              </div>
+              
+              <p className="project-description">{project.descricao}</p>
+              
+              <div className="project-technologies">
+                <h4>Tecnologias:</h4>
+                <div className="tech-stack">
+                  {project.ferramentas.map((tech) => (
+                    <div key={tech} className="tech-item">
+                      <img src={tech} alt={`Tecnologia ${tech}`} />
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="project-actions">
+                <a 
+                  href={project.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="github-link"
+                >
+                  <img
+                    src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white"
+                    alt="Ver no GitHub"
+                  />
+                </a>
+              </div>
             </div>
           </div>
         ))}

@@ -2,26 +2,103 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 2rem;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .icons-contact a{
-    margin: 0 10px;
-    color: #333;
-    font-size: 2rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 
 .icons-contact a img{
-    width: 50px;
-    height: 50px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease, outline 0.3s ease;
-    background-color: #B1C6DE;
-    border-radius: 0.1em;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #3F6188, #008AE0);
+    padding: 12px;
+    box-shadow: 0 8px 25px rgba(0, 138, 224, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: brightness(1.1);
+}
+
+.icons-contact a:hover {
+    transform: translateY(-8px) scale(1.1);
 }
 
 .icons-contact a img:hover {
-    background-color: #0168a8;
+    background: linear-gradient(145deg, #008AE0, #3F6188);
+    box-shadow: 0 15px 40px rgba(0, 138, 224, 0.6);
+    border-color: rgba(255, 255, 255, 0.3);
+    filter: brightness(1.3);
+}
+
+
+.icons-contact a:nth-child(1) img {
+    animation: subtlePulse 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.icons-contact a:nth-child(2) img {
+    animation: subtlePulse 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+}
+
+.icons-contact a:nth-child(3) img {
+    animation: subtlePulse 3s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.icons-contact a:nth-child(4) img {
+    animation: subtlePulse 3s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+
+@keyframes subtlePulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(0, 138, 224, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 25px rgba(0, 138, 224, 0.5);
+    }
+}
+
+
+@media (max-width: 768px) {
+    .icons-contact {
+        margin-top: 1.5rem;
+        gap: 1rem;
+    }
+    
+    .icons-contact a img {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .icons-contact {
+        margin-top: 1rem;
+        gap: 0.8rem;
+    }
+    
+    .icons-contact a img {
+        width: 45px;
+        height: 45px;
+        padding: 8px;
+    }
+    
+    .icons-contact a:hover {
+        transform: translateY(-5px) scale(1.05);
+    }
 }

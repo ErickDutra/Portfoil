@@ -3,27 +3,38 @@ import "../assets/css/about.css";
 import ItensContact from "../components/itensContact";
 function About() {
   return (
-    <div id="about" className="about block">
-      <div className="about-image block">
-        <img src={img} alt="Erick Dutra" />
+    <div id="about" className="about ">
+      <div className="about-image ">
+        <img src={img} alt="Erick Dutra - Desenvolvedor Full Stack" />
+        <div className="image-overlay">
+          <div className="tech-badge">Java</div>
+          <div className="tech-badge">TypeScript</div>
+          <div className="tech-badge">React</div>
+        </div>
       </div>
-      <div className="about-text block">
-      <p>
-          Sou um desenvolvedor{" "}
-          <b>Back-end</b> com experiência profissional em{" "}
-          <b>TypeScript</b>, com o principal foco em desenvolvimento de soluções
-          em <b>Java</b>, utilizando Spring Boot. Além disso, tenho experiência no
-          desenvolvimento de aplicações multiplataforma com{" "}
-          <b>Flutter</b> e conhecimentos básicos em Front-end com React.
-          <br />
-          Por atuar não apenas no desenvolvimento de aplicações, mas também na
-          integração de clientes e na estilização de relatórios, adquiri um
-          conhecimento sólido em bancos de dados relacionais, como{" "}
-          <b>PostgreSQL</b> e <b>MySQL</b>. Também possuo conhecimento em{" "}
-          <b>Docker</b>, o que me permite criar ambientes de desenvolvimento e produção
-          mais eficientes e escaláveis.
-        </p>
-        <ItensContact/>
+      <div className="about-content ">
+        <div className="about-header">
+          <h2>Sobre Mim</h2>
+          <div className="underline"></div>
+        </div>
+        <div className="about-text">
+          <p className="intro">
+            Olá! Sou <span className="highlight">Erick Dutra</span>,
+            desenvolvedor apaixonado por criar soluções tecnológicas que sejam
+            inovadoras e eficientes. Atuo no <b>Back-end</b> com <b>Java</b> e{" "}
+            <b>Spring Boot</b>, construindo APIs seguras e escaláveis, e também
+            tenho experiência com <b>TypeScript</b> em aplicações modernas e
+            performáticas. No mobile, utilizo <b>Flutter</b> para desenvolver
+            apps multiplataforma, enquanto no <b>Front-end</b> trabalho com{" "}
+            <b>React</b> para criar interfaces dinâmicas e responsivas. Minha
+            experiência vai desde a arquitetura de sistemas até a integração com
+            clientes e a personalização de relatórios. Além disso, possuo
+            conhecimento sólido em bancos de dados como <b>PostgreSQL</b> e{" "}
+            <b>MySQL</b>, e utilizo <b>Docker</b> para containerização e
+            práticas de DevOps.
+          </p>
+        </div>
+        <ItensContact />
       </div>
     </div>
   );

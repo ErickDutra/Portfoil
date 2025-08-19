@@ -1,152 +1,292 @@
 
-.about{
+.about {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #071B33;
-
-}
-
-@keyframes appear {
-    from {
-      opacity: 0;
-      clip-path: inset(100% 100% 0 0);
-    }
-    to {
-      opacity: 1;
-      clip-path: inset(0 0 0 0);
-    }
-  }
-
-  .block {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 50%;
-  }
-
-.about-text{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    flex-direction: column;
-    text-align: left;
-    width: 50%;
-    animation: apper linear;
-    animation-timeline: entry 30% cover 40%;
-}
-
-.about-text p{
-    font-size: 1.8rem;
-    color: whitesmoke;
-    text-align: justify;
-    text-indent: 3rem;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #071B33 0%, #0A2847 50%, #071B33 100%);
     padding: 1rem;
-    border-radius: 0.4rem;
+    gap: 3rem;
+    padding-top: 100px;
+}
+
+
+.about-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    max-width: 350px;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+    border-radius: 18px;
+    box-shadow: 0 15px 35px rgba(0, 138, 224, 0.25);
     border: 2px solid #3F6188;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-h2{
-    color: black;
-    font-size: 2rem;
-    margin: 1rem 0;
+.about-image img:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 138, 224, 0.4);
 }
 
-b{
+.image-overlay {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.tech-badge {
+    background: linear-gradient(45deg, #008AE0, #3F6188);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    box-shadow: 0 3px 12px rgba(0, 138, 224, 0.25);
+    transition: transform 0.3s ease;
+    animation: slideInLeft 1.7s ease-out 0.9s both;
+}
+
+.tech-badge:hover {
+    transform: translateY(-2px);
+}
+
+.about-content {
+    flex: 1;
+    max-width: 550px;
+    animation: slideInLeft 1s ease-out 0.2s both;
+}
+
+.about-header {
+    margin-bottom: 1.5rem;
+    animation: slideInLeft 0.9s ease-out 0.1s both;
+}
+
+.about-header h2 {
     color: #008AE0;
     font-size: 2.5rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 700;
+    background: linear-gradient(45deg, #008AE0, #3F6188);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
-.about-image{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 20px 60px;
+.underline {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(45deg, #008AE0, #3F6188);
+    border-radius: 2px;
+    margin-bottom: 0.8rem;
+    animation: slideInLeft 1.1s ease-out 0.3s both;
 }
 
-img {
-    width: 100%;
-    height: 60%;
-}
-
-@media( max-width: 1400px ) {
-    .about-text{
-        width: 70%;
-    }
-    
-    .about-image{
-        margin: 10px 10px;
-    }
-
-    img {
-        width: 80%;
-        height: 50%;
-    }
-
-    .about-text p{
-        font-size: 1.0rem;
-    }
-
-    h2{
-        font-size: 1.0rem;
-    }
-
-
-}
-
-
-@media( max-width: 480px ) {
-  .about{
+.about-text {
     display: flex;
     flex-direction: column;
-    height: 120vh;
+    gap: 1.2rem;
+    margin-bottom: 2.5rem;
+    animation: slideInLeft 1.3s ease-out 0.5s both;
 }
 
-img {
-  width: 90%;
-  height: 60%;
+.about-text p {
+    font-size: 1rem;
+    color: #E8F4FD;
+    line-height: 1.7;
+    text-align: justify;
+    padding: 1.2rem;
+    background: rgba(63, 97, 136, 0.1);
+    border-radius: 12px;
+    border: 1px solid rgba(63, 97, 136, 0.3);
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideInLeft 1.5s ease-out 0.7s both;
 }
 
-.about-text p{
-  font-size: 0.9rem;
-  color: whitesmoke;
-  text-align: justify;
-  text-indent: 3rem;
-  padding: 1.5rem;
-  border-radius: 0.4rem;
-  border: 2px solid #3F6188;
+.about-text p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 138, 224, 0.15);
 }
 
-h2{
-  color: black;
-  font-size: 1rem;
-  margin: 0.5rem 0;
-}
-b{
-  color: #008AE0;
-  font-size: 1.2rem;
+
+
+.intro {
+    font-size: 1.25rem !important;
+    font-weight: 500;
+    background: rgba(0, 138, 224, 0.1) !important;
+    border: 2px solid rgba(0, 138, 224, 0.3) !important;
 }
 
-.about-image{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: -250px;
+.highlight {
+    color: #008AE0;
+    font-weight: bold;
+    font-size: 1.1em;
 }
 
-.about-text{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 150vh;
-  flex-direction: column;
-  text-align: left;
-  width: 85%;
+b {
+    color: #008AE0;
+    font-weight: 700;
+    font-size: 1.05em;
+    text-shadow: 0 0 8px rgba(0, 138, 224, 0.25);
 }
 
-.block {
-  animation: none !important;
+
+@media (max-width: 1400px) {
+    .about {
+        gap: 2rem;
+        padding: 1.2rem;
+        padding-top: 90px; 
+    }
+    
+    .about-header h2 {
+        font-size: 2.2rem;
+    }
+    
+    .about-text p {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+    
+    .intro {
+        font-size: 1.1rem !important;
+    }
+    
+    .tech-badge {
+        font-size: 0.75rem;
+        padding: 5px 10px;
+    }
+    
+    .about-image {
+        max-width: 320px;
+    }
+    
+    .about-image img {
+        max-height: 380px;
+    }
 }
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        gap: 2.5rem;
+        padding: 1.5rem 1rem;
+        padding-top: 80px; 
+        min-height: auto;
+    }
+    
+    .about-image {
+        max-width: 280px;
+        order: 1;
+    }
+    
+    .about-image img {
+        max-height: 320px;
+    }
+    
+    .about-content {
+        order: 2;
+        max-width: 100%;
+    }
+    
+    .about-header h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .underline {
+        margin: 0 auto 0.8rem auto;
+    }
+    
+    .about-text p {
+        font-size: 0.9rem;
+        padding: 0.9rem;
+    }
+    
+    .intro {
+        font-size: 1.05rem !important;
+    }
+    
+    .image-overlay {
+        position: static;
+        transform: none;
+        justify-content: center;
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 1rem 0.5rem;
+        padding-top: 70px; 
+        gap: 1.5rem;
+    }
+    
+    .about-image {
+        max-width: 220px;
+    }
+    
+    .about-image img {
+        border-radius: 12px;
+        max-height: 280px;
+    }
+    
+    .about-header h2 {
+        font-size: 1.6rem;
+    }
+    
+    .about-text {
+        gap: 0.8rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about-text p {
+        font-size: 0.85rem;
+        padding: 0.7rem;
+        line-height: 1.5;
+    }
+    
+    .intro {
+        font-size: 0.95rem !important;
+    }
+    
+    .tech-badge {
+        font-size: 0.65rem;
+        padding: 3px 6px;
+    }
+    
+    .highlight {
+        font-size: 1.05em;
+    }
+    
+    b {
+        font-size: 0.95em;
+    }
+    
+    .block {
+        animation: none !important;
+    }
+}
+
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
